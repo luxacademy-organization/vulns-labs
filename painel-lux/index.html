@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUX Academy - Laboratórios de Segurança</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">LUX</div>
+                <div class="brand-text">
+                    <h1>LUX Academy</h1>
+                    <span>Laboratórios de Cibersegurança</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#labs">Laboratórios</a>
+                <a href="#rules">Regras</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Pratique segurança ofensiva</h2>
+            <p>Laboratórios realistas para aprendizado prático de vulnerabilidades web</p>
+        </div>
+    </section>
+
+    <section id="rules" class="rules-section">
+    <div class="container">
+        <div class="section-header">
+            <h3>⚖️ Código de Ética e Regras</h3>
+            <p>Acesso permitido apenas mediante a aceitação destas diretrizes</p>
+        </div>
+        
+        <div class="rules-grid">
+            <div class="rule-card danger">
+                <div class="rule-icon">🚫</div>
+                <h4>Uso de Ferramentas Externa</h4>
+                <p>É estritamente proibido o uso de scanners de vulnerabilidade automatizados (como Nessus ou Acunetix) que possam sobrecarregar o servidor.</p>
+            </div>
+            
+            <div class="rule-card warning">
+                <div class="rule-icon">🛡️</div>
+                <h4>Responsabilidade Legal</h4>
+                <p>Você é legalmente responsável por suas ações. O conhecimento aqui adquirido deve ser usado apenas em ambientes autorizados.</p>
+            </div>
+            
+            <div class="rule-card info">
+                <div class="rule-icon">🤐</div>
+                <h4>Política de Spoiler</h4>
+                <p>Não publique flags ou soluções (write-ups) em redes sociais sem autorização. Ajude outros a aprenderem pelo próprio esforço.</p>
+            </div>
+
+            <div class="rule-card success">
+                <div class="rule-icon">🔍</div>
+                <h4>Reporte de Bugs</h4>
+                <p>Encontrou uma falha na plataforma que não faz parte do lab? Reporte à administração para ganhar pontos de bônus.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="labs" class="labs-section">
+        <div class="container">
+            <div class="section-header">
+                <h3>🧪 Laboratórios Disponíveis</h3>
+            </div>
+
+            <div class="labs-list">
+                <div class="lab-card" id="lab-idor">
+                    <div class="lab-header"> <div class="lab-info">
+                            <span class="lab-level beginner">Iniciante</span>
+                            <h4 class="lab-title">IDOR - Broken Access Control</h4>
+                        </div>
+                        <div class="lab-meta">
+                            <span class="lab-status available">Disponível</span>
+                            <svg class="expand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="lab-content">
+                        <div class="content-section">
+                            <h5>🎭 Contexto</h5>
+                            <div class="story-box">
+                                <p>Você é <strong>Anderson Motta</strong>. Seu objetivo é acessar o extrato de <strong>Pedro Thiago</strong>.</p>
+                                <p>Use o email <strong>anderson@luxacademy.com</strong> e a senha <strong>andersonlux</strong> para acessar a sua conta.</p>
+                                <p>Dados de Pedro: Conta 20261525-5 | Agência 001</p>
+                            </div>
+                        </div>
+                        <div class="content-section">
+        <h5>🎯 Escopo do Desafio</h5>
+        <div class="scope-container">
+            <div class="scope-box allowed">
+                <div class="scope-title">✅ Permitido</div>
+                <ul>
+                    <li>Manipular parâmetros de URL e requisições HTTP.</li>
+                    <li>Analisar o tráfego de rede via DevTools do navegador.</li>
+                    <li>Explorar falhas de lógica no acesso a contas de terceiros.</li>
+                </ul>
+            </div>
+            <div class="scope-box denied">
+                <div class="scope-title">❌ Proibido</div>
+                <ul>
+                    <li>Realizar ataques de negação de serviço (DoS).</li>
+                    <li>Utilizar ferramentas de Brute Force automatizadas.</li>
+                    <li>Tentar acessar o código-fonte do servidor ou arquivos de sistema.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+                        <div class="content-section flag-section">
+                            <h5>🚩 Validação da Flag</h5>
+                            <div class="flag-input-group">
+                                <div class="input-wrapper">
+                                    <input type="text" id="input-idor" placeholder="TX0000..." maxlength="20">
+                                    <button id="btn-idor" class="btn-validate">Validar</button>
+                                </div>
+                            </div>
+                            <div id="result-idor" class="flag-result"></div>
+                        </div>
+
+                        <div class="action-section">
+                            <a href="labs/idor-bank/index.html" target="_blank" class="btn-enter-lab">🚀 Entrar no Lab</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
